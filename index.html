@@ -14,33 +14,29 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">song-tts</span>
+        <span class="mdl-layout-title">play-tts</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">song-tts</span>
+      <span class="mdl-layout-title">play-tts</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="https://github.com/cooler9711">github (cooler9711)</a>
-        <a class="mdl-navigation__link" href="https://github.com/cooler9711/song-tts">github (this project)</a>
+        <a class="mdl-navigation__link" href="https://github.com/cooler9711/play-tts">github (this project)</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
       <div class="page-content">
-        <form action="/getlyric " method="post">
+        <form action="/playtts " method="post">
           <br>
+          <p>this will play on the computer running the server, not on your computer</p>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="name">
-            <label class="mdl-textfield__label" for="sample3">song name</label>
+            <input class="mdl-textfield__input" type="text" name="stuff">
+            <label class="mdl-textfield__label" for="sample3">what do you want to say?</label>
           </div>
           <br>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" name="artist">
-            <label class="mdl-textfield__label" for="sample3">song artist</label>
-          </div>
-          <br>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">convert that song</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">play that tts</button>
         </form>
       </div>
     </main>
