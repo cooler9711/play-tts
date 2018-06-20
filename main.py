@@ -3,6 +3,7 @@ from gtts import gTTS
 from pygame import mixer
 from random import randint
 import os
+import time
 
 @route('/')
 def main():
@@ -17,12 +18,11 @@ def getaudio():
     stuff = request.forms.get('stuff')
     filename = str(randint(0,999)) + ".mp3"
     tts = gTTS(text=stuff, lang='en', slow=False)
-    tts.save("./" + filename)
+    tts.save('./' + filename)
     mixer.init()
     mixer.music.load('./' + filename)
     mixer.music.play()
-    os.remove("./" + filename)
-    return ('''<span> hai big boi </span>''')
+    return ("<span> you said " + stuff + " with the file name " + filename + "</span>")
 
 
 run(host='localhost', port=8080, debug=True)
